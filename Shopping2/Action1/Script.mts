@@ -23,5 +23,5 @@ Browser("Browser_3").Page("Afrekenen - Magento").WebEdit("postcode").Set "321456
 Browser("Browser_3").Page("Afrekenen - Magento").WebEdit("telephone").Set "050986552"
 Browser("Browser_3").Page("Afrekenen - Magento").WebRadioGroup("Free").Select "freeshipping_freeshipping"
 Browser("Browser_3").Page("Afrekenen - Magento").WebButton("Volgende").Click
-Browser("Browser_3").Page("Afrekenen - Magento").WebRadioGroup("payment[method]").Select "CredidCard"
+Browser("Browser_3").Page("Afrekenen - Magento").WebRadioGroup("payment[method]").Select "cashondelivery"
 Browser("Browser_3").Page("Afrekenen - Magento").WebButton("Nu bestellen en betalen").Click
