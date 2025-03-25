@@ -1,7 +1,6 @@
 ﻿Browser("Tanks - Tops - Men - Magento").Page("Openbare Magento 2 demo").Sync
 Browser("Tanks - Tops - Men - Magento").Navigate "https://magento2demo.firemultimedia.nl/"
 Browser("Browser_3").Page("Openbare Magento 2 demo").WebEdit("q").Set "bags"
-wait 120
 Browser("Browser_3").Page("Openbare Magento 2 demo").WebEdit("q").Submit
 Browser("Browser_3").Page("Zoekresultaten voor: ‘bug’").Image("Push It Messenger Bag").Click
 Browser("Browser_3").Page("Push It Messenger Bag").Link("Reviews 3").Click @@ script infofile_;_ZIP::ssf99.xml_;_
