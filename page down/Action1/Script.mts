@@ -2,7 +2,7 @@
 Wait 5
 Browser("Login -").Navigate "https://integration-branch-prod.almoctane.com/ui/?p=21003/1002#/mbt-designer/hierarchy/units" @@ hightlight id_;_986284_;_script infofile_;_ZIP::ssf11.xml_;_
 Browser("Login -").Page("Login -").WebEdit("federateLoginName").Set Parameter("User_name")
-If If Browser("Login -").Page("Functional Testing Model-Based").WebButton("Unit").Exist  Then 
+If Browser("Login -").Page("Functional Testing Model-Based").WebButton("Unit").Exist  Then 
 	Reporter.ReportEvent micFail, "login", " login Failed site is down!"
 else
 	Reporter.ReportEvent micPass, "login ", "login Succeeded!"
@@ -13,7 +13,7 @@ Wait 2
 Browser("Login -_2").Page("Login -").WebEdit("password").Set Parameter("Password")
 Browser("Login -").Page("Login -").WebButton("SIGN IN").Click
 Browser("Login -").Navigate "https://integration-branch-prod.almoctane.com/ui/?p=21003/1002#/fte/fte-scheduler/grid"
-If If Browser("Login -").Page("Functional Testing Model-Based").WebButton("Unit") Then 
+If Browser("Login -").Page("Functional Testing Model-Based").WebButton("Unit") Then 
 	Reporter.ReportEvent micFail, "Unit Creation", " Unit Creation Failed site is down!"
 else
 	Reporter.ReportEvent micPass, "Unit Creation", "Unit Creation  Succeeded!"
