@@ -26,7 +26,7 @@ Browser("Openbare Magento 2 demo").Page("Afrekenen - Magento").WebElement("Bank 
 If Not Browser("Openbare Magento 2 demo").Page("Afrekenen - Magento").WebElement(" Transfer Mony").Exist  Then 
 	Reporter.ReportEvent micPass, "Bank Transfer Payment ", " Bank Transfer Paymentt Succeeded !"
 else
-	Reporter.ReportEvent micFail, "Bank Transfer Payment ", ""Error 1002: Bank Transfer Payment failed. Please retry or contact support.!"
+	Reporter.ReportEvent micFail, "Bank Transfer Payment ", "Error 1002: Bank Transfer Payment failed. Please contact support.!"
 	ExitTest("Error 1002: Credit card payment failed. Please retry or contact support.")
 End If @@ script infofile_;_ZIP::ssf24.xml_;_
 Browser("Openbare Magento 2 demo").Page("Afrekenen - Magento").WebButton("Nu bestellen en betalen").Click
