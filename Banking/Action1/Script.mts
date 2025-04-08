@@ -34,7 +34,7 @@ else
 End If
 Browser("Home - Advantage Bank").Page("Cards - Advantage Bank").WebElement("debit Card").Click @@ script infofile_;_ZIP::ssf19.xml_;_
  @@ script infofile_;_ZIP::ssf21.xml_;_
-If Browser("Home - Advantage Bank").Page("Cards - Advantage Bank").WebElement("active").Exsit Then @@ script infofile_;_ZIP::ssf22.xml_;_
+If Browser("Home - Advantage Bank").Page("Cards - Advantage Bank").WebElement("active").Exist Then @@ script infofile_;_ZIP::ssf22.xml_;_
 Reporter.ReportEvent micPass, "Debit card ", " Debit card is Active"
 else
 	Reporter.ReportEvent micFail, "Debit card  - status: Inactive ", " Debit card - status: Inactive" 
