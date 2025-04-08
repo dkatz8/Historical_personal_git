@@ -13,7 +13,7 @@ Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebNumber("amo
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebEdit("description").Set "Transaction number 1" @@ script infofile_;_ZIP::ssf11.xml_;_
 Wait 2
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Send").Click @@ script infofile_;_ZIP::ssf12.xml_;_
-If Browser("Home - Advantage Bank_2").Page("Cards - Advantage Bank").Link("5294279448747549").Exist Then @@ script infofile_;_ZIP::ssf47.xml_;_
+If Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Confirmation").Exist Then @@ script infofile_;_ZIP::ssf47.xml_;_
 Reporter.ReportEvent micPass, "Transfer transactions ", " Transfer transactions successed "
 else
 	Reporter.ReportEvent micFail, "Transfer transactions ", " Transfer transactions Failed" 
@@ -21,7 +21,7 @@ else
 End If
 Browser("Home - Advantage Bank").Page("Accounts - Advantage Bank").Link("Dashboard").Click @@ script infofile_;_ZIP::ssf41.xml_;_
 Browser("Home - Advantage Bank_2").Page("Dashboard - Advantage").Link("Cards").Click
-If Browser("Home - Advantage Bank_2").Page("Cards - Advantage Bank").Link("5164426944235348").Exist Then  @@ hightlight id_;_336292_;_script infofile_;_ZIP::ssf45.xml_;_
+If Browser("Home - Advantage Bank_2").Page("Cards - Advantage Bank").Link("5164426944235348").Exist Then @@ hightlight id_;_336292_;_script infofile_;_ZIP::ssf45.xml_;_
 Reporter.ReportEvent micPass, "Credit card ", " Credit card is Active"
 else
 	Reporter.ReportEvent micFail, "Credit card  - status: Inactive ", " Credit card - status: Inactive" 
