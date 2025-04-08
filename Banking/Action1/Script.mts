@@ -10,19 +10,23 @@ Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebNumber("amo
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebEdit("description").Set "Transaction number 1" @@ script infofile_;_ZIP::ssf11.xml_;_
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Send").Click @@ script infofile_;_ZIP::ssf12.xml_;_
 Browser("Home - Advantage Bank").Page("Accounts - Advantage Bank").Link("Dashboard").Click @@ script infofile_;_ZIP::ssf13.xml_;_
+ @@ script infofile_;_ZIP::ssf35.xml_;_
+Dim actualAmount
+actualAmount = Browser("Home - Advantage Bank").Page("Dashboard - Advantage").WebElement("amountElement").GetROProperty("innertext")
 
-If Browser("Home - Advantage Bank").Page("Dashboard - Advantage").WebElement("200.00").Exist Then
-	Reporter.ReportEvent micPass, "Bank Transfer Payment ", " Bank Transfer Paymentt Succeeded !"
-else
-	Reporter.ReportEvent micFail, "Bank Transfer Payment ", " Bank Transfer Payment failed. Error 501 from Back office!" 
-	ExitTest("Bank Transfer Payment failed. Error 501 from Back office. Please retry or contact support.")
-End If @@ script infofile_;_ZIP::ssf16.xml_;_
+If actualAmount = "200.00" Then
+    Reporter.ReportEvent micPass, "Bank Transfer Payment", "Bank Transfer Payment Succeeded!"
+Else
+    Reporter.ReportEvent micFail, "Bank Transfer Payment", "Bank Transfer Payment failed. Expected 200.00 but got: " & actualAmount
+    ExitTest("Bank Transfer Payment failed. Please retry or contact support.")
+End If
+ @@ script infofile_;_ZIP::ssf16.xml_;_
 Browser("Home - Advantage Bank").Page("Accounts - Advantage Bank").Link("Cards").Click @@ script infofile_;_ZIP::ssf17.xml_;_
 
 Browser("Home - Advantage Bank").Page("Cards - Advantage Bank").WebElement("credit Card").Click @@ script infofile_;_ZIP::ssf18.xml_;_
 If Browser("Home - Advantage Bank").Page("Cards - Advantage Bank").WebElement("active").Exsit Then @@ script infofile_;_ZIP::ssf22.xml_;_
 Reporter.ReportEvent micPass, "Credit card ", " Credit card is Active"
-else
+Else
 	Reporter.ReportEvent micFail, "Credit card  - status: Inactive ", " Credit card - status: Inactive" 
 	ExitTest("Credit card - status: Inactive.")
 End If
@@ -30,7 +34,7 @@ Browser("Home - Advantage Bank").Page("Cards - Advantage Bank").WebElement("debi
  @@ script infofile_;_ZIP::ssf21.xml_;_
 If Browser("Home - Advantage Bank").Page("Cards - Advantage Bank").WebElement("active").Exist Then @@ script infofile_;_ZIP::ssf22.xml_;_
 Reporter.ReportEvent micPass, "Debit card ", " Debit card is Active"
-else
+Else
 	Reporter.ReportEvent micFail, "Debit card  - status: Inactive ", " Debit card - status: Inactive" 
 	ExitTest("Debit card - status: Inactive.")
 End If
