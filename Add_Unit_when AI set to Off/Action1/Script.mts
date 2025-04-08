@@ -17,12 +17,4 @@ Else
 	Reporter.ReportEvent micFail, "Add Unit", "Add Unit failed!"
 	ExitTest("This shared space is not active.Contact your administrator for details on when it will be available")
 End If
-Browser("Login -").Page("Login -").WebEdit("federateLoginName").Set Parameter("User_name")
-Browser("Login -").Page("Login -").WebButton("CONTINUE").Click
-Browser("Login -_2").Page("Login -").WebEdit("password").Set Parameter("Password")
-Browser("Login -").Page("Login -").WebButton("SIGN IN").Click
-Browser("Login -").Page("Functional Testing Model-Based").WebButton("Unit").Click @@ script infofile_;_ZIP::ssf6.xml_;_
-Browser("Login -").Page("Functional Testing Model-Based").WebEdit("Name").Set "Unit 1"
-Browser("Login -").Page("Functional Testing Model-Based").WebButton("Add      Add").Click @@ script infofile_;_ZIP::ssf8.xml_;_
-Browser("Login -").Page("Functional Testing Model-Based").Image("user avatar").Click
-Browser("Login -").Page("Functional Testing Model-Based").WebButton("Sign out").Click @@ script infofile_;_ZIP::ssf39.xml_;_
+ @@ script infofile_;_ZIP::ssf39.xml_;_
