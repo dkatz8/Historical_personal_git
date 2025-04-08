@@ -14,8 +14,7 @@ Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebEdit("descr
 Wait 2
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Send").Click @@ script infofile_;_ZIP::ssf12.xml_;_
 Browser("Home - Advantage Bank").Page("Accounts - Advantage Bank").Link("Dashboard").Click @@ script infofile_;_ZIP::ssf41.xml_;_
-Browser("Home - Advantage Bank_2").Page("Dashboard - Advantage").Link("Cards").Click @@ script infofile_;_ZIP::ssf42.xml_;_
-Browser("Home - Advantage Bank_2").Page("Cards - Advantage Bank").WebButton("WebButton").Click @@ script infofile_;_ZIP::ssf43.xml_;_
+Browser("Home - Advantage Bank_2").Page("Dashboard - Advantage").Link("Cards").Click
 If Browser("Home - Advantage Bank_2").Page("Cards - Advantage Bank").Link("5164426944235348").Exist Then  @@ hightlight id_;_336292_;_script infofile_;_ZIP::ssf45.xml_;_
 Reporter.ReportEvent micPass, "Credit card ", " Credit card is Active"
 else
