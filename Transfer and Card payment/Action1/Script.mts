@@ -17,7 +17,7 @@ If Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("
 Reporter.ReportEvent micPass, "Transfer transactions ", " Transfer transactions successed "
 else
 	Reporter.ReportEvent micFail, "Transfer transactions ", " Transfer transactions Failed" 
-	ExitTest("payment refused by gateway - status: DECLINED")
+	ExitTest("payment refused by gateway - status: DECLINED Backoffice Server not reachable")
 End If
 Browser("Home - Advantage Bank").Page("Accounts - Advantage Bank").Link("Dashboard").Click @@ script infofile_;_ZIP::ssf41.xml_;_
 Browser("Home - Advantage Bank_2").Page("Dashboard - Advantage").Link("Cards").Click
