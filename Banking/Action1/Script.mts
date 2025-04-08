@@ -11,7 +11,7 @@ Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebEdit("descr
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Send").Click @@ script infofile_;_ZIP::ssf12.xml_;_
 Browser("Home - Advantage Bank").Page("Accounts - Advantage Bank").Link("Dashboard").Click @@ script infofile_;_ZIP::ssf13.xml_;_
 
-If Browser("Home - Advantage Bank").Page("Dashboard - Advantage").WebElement("200.00").Exist Then @@ script infofile_;_ZIP::ssf14.xml_;_
+If Browser("Home - Advantage Bank").Page("Dashboard - Advantage").WebElement("200.00").Exist Then
 	Reporter.ReportEvent micPass, "Bank Transfer Payment ", " Bank Transfer Paymentt Succeeded !"
 else
 	Reporter.ReportEvent micFail, "Bank Transfer Payment ", " Bank Transfer Payment failed. Error 501 from Back office!" 
