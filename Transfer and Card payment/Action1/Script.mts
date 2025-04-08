@@ -12,7 +12,7 @@ Wait 2
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebNumber("amount").Set "400000" @@ script infofile_;_ZIP::ssf10.xml_;_
 Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebEdit("description").Set "Transaction number 1" @@ script infofile_;_ZIP::ssf11.xml_;_
 Wait 2
-Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Send").Click @@ script infofile_;_ZIP::ssf12.xml_;_
+Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Check out").Click @@ script infofile_;_ZIP::ssf12.xml_;_
 If Browser("Home - Advantage Bank").Page("New Transfer - Advantage").WebButton("Confirmation").Exist Then @@ script infofile_;_ZIP::ssf47.xml_;_
 Reporter.ReportEvent micPass, "Transfer transactions ", " Transfer transactions successed "
 else
