@@ -6,9 +6,3 @@ else
 	Reporter.ReportEvent micFail, "Staging Sainty test ", " Staging AUT is down or not responding" 
 	ExitTest("AUT is down or not responding.")
 End If
-
-	Reporter.ReportEvent micPass, "Add Unit ", " AUT is UP !"
-Else
-	Reporter.ReportEvent micFail, "Add Unit", "Add Unit failed!"
-	ExitTest("AUT is down or not responding!")
-End If
