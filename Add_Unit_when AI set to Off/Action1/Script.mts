@@ -1,5 +1,5 @@
 ﻿Browser("Login -").Page("Login -").Sync
-Browser("Login -").Navigate "https://integration-branch-prod.almoctane.com/ui/?p=21001/1002#/fte/fte-scheduler-tests/grid" @@ hightlight id_;_986284_;_script infofile_;_ZIP::ssf11.xml_;_
+Browser("Login -").Navigate "https://qa3.almoctane.com/ui/" @@ hightlight id_;_986284_;_script infofile_;_ZIP::ssf11.xml_;_
 
 If Browser("Login -").Page("Login -").WebButton("CONTINUE").Exsit Then
 	Reporter.ReportEvent micPass, "Add Unit ", " Tenant is Active !"
